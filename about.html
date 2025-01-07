@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Shemaiah</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
    <style>
    
 body {
@@ -13,7 +14,7 @@ body {
 }
 header {
     text-align: center;
-    background-color:black;
+    background-color:green;
     color: white;
     max-width: 100%;
     padding: 10px;
@@ -43,7 +44,8 @@ header h1{
     text-align: justify;
     justify-content: center;
     padding: 20px; 
-    background-color: black;
+    background-color:green;
+    border-radius: 10px;
 }
 .bio-container img {
     height: 400px;
@@ -99,6 +101,71 @@ header h1{
     background-color: green;
     border-radius: 10px;
 }
+footer{
+    padding: 10px 50px;
+    display: flex;
+    justify-content: space-between;
+    background-color: white;
+    background:green;
+}
+footer .logo-details{
+ font-size: 40px;
+ font-weight: bold;
+ color: white;
+}
+.media-icon{
+    display: flex;
+    margin-right: 40px;
+}
+footer .media-icon a{
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    margin: 0 8px;
+    text-align: center;
+    line-height: 40px;
+    font-size: 17px;
+    text-decoration: none;
+    font-size:20px;
+    color: #fff;
+
+}
+.media-icon a:nth-child(1){
+    background: #4267B2;
+}
+.media-icon a:nth-child(1):hover{
+    color:#4267B2 ;
+    background: #fff;
+}
+.media-icon a:nth-child(2){
+    background: #1DA1F2;
+}
+.media-icon a:nth-child(2):hover{
+    color:#1DA1F2 ;
+    background: #fff;
+}
+.media-icon a:nth-child(3){
+    background: #E1306C;
+}
+.media-icon a:nth-child(3):hover{
+    color:#E1306C ;
+    background: #fff;
+}
+.media-icon a:nth-child(4){
+    background: #0077B5;
+}
+.media-icon a:nth-child(4):hover{
+    color:#0077B5 ;
+    background: #fff;}
+
+.media-icon a:nth-child(5){
+    background: red;
+}
+.media-icon a:nth-child(5):hover{
+    color:red ;
+    background: #fff;
+}
+
    </style>
 </head>
 <body>
@@ -149,5 +216,19 @@ header h1{
                 </div>
             </div>
         </section>
+        <footer>
+            <div class="logo-details">
+                <i class="fab fa-slack"></i>
+                <span class="name">Shemaiah</span>
+            </div>
+
+            <div class="media-icon">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-youtube"></i></a>
+            </div>
+        </footer>
 </body>
 </html>
