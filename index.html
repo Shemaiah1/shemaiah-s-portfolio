@@ -26,17 +26,18 @@ body::before{
 }
 nav{
     padding: 0 60px;
+    padding-top: 20px;
     width: 100%;
-    background-color: white;
     position: fixed;
     display: flex;
     justify-content: space-between;
-   
+    border-bottom:2px s0lid white ;
 }
 nav .logo{
-    font-size: 40px;
+    font-size: 50px;
     font-weight: bold;
-    padding: 10px;
+    padding: 10px; 
+    color: white;
 }
 nav ul {
     display: flex;
@@ -50,19 +51,24 @@ nav ul li{
 }
 nav ul li a{
     display: block;
-    color:black ;
-    font-size:30px;
+    font-size:25px;
     padding:10px ;
-    transition: .2s;
     margin: 0 auto;
     text-decoration: none;
     font-weight: bold;
-    border-radius: 40px;
+    color: black;
+    background-color: white;
+    text-decoration: none;
+    border-radius: 25px;
+    box-shadow: 0 4px 4px #acb4b5;
+    transition: all 0.3s ease;
+    text-align: center;
 }
 nav ul li a:hover{
-    color:white;
-    background-color:black;
-    transform: scale(1.08);
+    background:transparent;
+    transform: scale(1.1);
+    box-shadow: 0 2px 2px #acb4b5;
+    color: white;
 }
 
 .hero{
@@ -104,7 +110,7 @@ nav ul li a:hover{
     text-align: center;
     left: 20%;
     position: absolute;
-    bottom: 60px;
+    bottom: 10%;
 }
 
 .button a:hover {
@@ -112,6 +118,214 @@ nav ul li a:hover{
     transform: scale(1.2);
     box-shadow: 0 2px 2px #acb4b5;
     color: white;
+}
+@media (max-width:1280px) {
+    .hero h1 {
+        font-size: 100px;
+    }
+    .hero h3 {
+        font-size: 40px;
+    }
+    .button a {
+        padding: 10px 16px;
+        font-size: 22px;
+        bottom:14%;
+    }
+    nav ul{
+        padding-top: 10px;
+    }
+    nav{
+        padding-top: 10px;
+    } 
+}
+
+@media (max-width:1024px) {
+    nav ul {
+        margin-right: 20px;
+    }
+    .hero {
+        top: 30%;
+        left: 5%;
+    }
+    .hero h1 {
+        font-size: 90px;
+    }
+    .hero h3 {
+        font-size: 35px;
+    }
+    .button a {
+        left: 10%;
+    }
+    nav{
+        padding-top: 50px;
+        padding-left: 20px;
+        padding-right: 8px;
+    }
+    nav .logo{
+        font-size: 50px;
+    }
+}
+@media (max-width:850px){
+    nav .logo{
+        text-align: center;
+        padding-top: 30px;
+        font-size: 55px;
+    }
+    nav {
+        padding:0px;
+        margin: 0px;
+    }
+    nav ul{
+        margin-top:20px ;
+        text-align: center;
+        display: flex;
+        flex-wrap: wrap;
+    }
+    nav ul li a{
+        font-size: 30px;
+    }
+    .button a{
+        bottom: 20%;
+    }
+}
+
+@media (max-width:768px) {
+    nav {
+        flex-direction: column;
+        padding: 0px;
+        padding-top: 20px;
+    }
+    nav .logo {
+        font-size: 40px;
+        padding:  0;
+    }
+    nav ul {
+        flex-wrap: wrap;
+        margin: 0;
+    }
+    nav ul li a {
+        font-size: 20px;
+    }
+    .hero {
+        left: 5%;
+        top: 28%;
+    }
+    .hero h1 {
+        font-size: 80px;
+    }
+    .hero h3 {
+        font-size: 30px;
+    }
+    .button a {
+        left: 8%;
+    }
+}
+
+@media (max-width:480px) {
+    nav ul {
+        flex-direction: row;
+        align-items: center;
+        padding: 0;
+        margin: 0;
+    }
+    nav .logo{
+        padding-top: 30px;
+        font-size: 35px;
+    }
+    nav ul li a {
+        font-size: 20px;
+        padding: 8px;
+    }
+    .hero {
+        max-width: 100%;
+        top: 25%;
+        left: 2%;
+        text-align: left;
+    }
+    .hero h1 {
+        font-size: 60px;
+        text-align: center;
+        padding: 10px 0;
+    }
+    .hero h3 {
+        font-size: 18px;
+    }
+    .button a {
+        font-size: 16px;
+        padding: 8px 12px;
+        bottom: 12%;
+    }
+}
+
+@media (orientation: landscape) and (max-height: 600px) {
+    .hero {
+        top: 28%;
+        left: 5%;
+    }
+    .hero h1 {
+        font-size: 50px;
+        padding-top: 0;
+    }
+    .hero h3 {
+        font-size: 20px;
+    }
+    .button a {
+        font-size: 14px;
+        bottom: 1%;
+    }
+    nav{
+        margin-top: 0px;
+    }
+    nav .logo{
+        font-size: 40px;
+    }
+    nav ul li a{
+        font-size: 18px;
+        padding: 10px;
+    }
+}
+
+/* Prevent overflow */
+body {
+    overflow-x: hidden;
+}
+@media (max-width: 360px) {
+    nav .logo {
+        font-size: 40px;
+    }
+    nav ul li a {
+        font-size: 20px;
+        padding: 6px;
+    }
+    .hero h1 {
+        font-size: 40px;
+        padding: 20px;
+        text-align: center;
+    }
+    .hero h3 {
+        font-size: 18px;
+        text-align: center;
+    }
+    .button a {
+        font-size: 14px;
+        padding: 6px 8px;
+    }
+}
+@media (max-width:320px){
+    nav .logo {
+        font-size: 30px;
+        padding-top: 0px;
+    }
+    nav ul li a {
+        font-size: 14px;
+        padding: 6px;
+    }
+    nav .logo{
+        padding-top: 10px;}
+    .button a {
+       bottom: 4%;
+       font-size: 14px;
+    }
 }
 
     </style>
