@@ -2,346 +2,119 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0 ">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Shemaiah's Profile</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
     <style>
-        * {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-    font-family: 'Times New Roman', Times, serif;
-}
-body{
-    background: url(/images/background.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 100vh;
-}
-body::before{
-    content: '';
-    position: absolute;
-    height: 100%;
-    width: 100%;
-    background: rgba(0, 0, 0,0.5);
-}
-nav{
-    padding: 0 60px;
-    padding-top: 20px;
-    width: 100%;
-    position: fixed;
-    display: flex;
-    justify-content: space-between;
-}
-nav .logo{
-    font-size: 50px;
-    font-weight: bold;
-    padding: 10px; 
-    color: white;
-}
-nav ul {
-    display: flex;
-    list-style-type: none;
-    justify-content: center;
-    margin-right: 80px;
-    padding: 0;
-    border-bottom:2px s0lid white ;
-}
-nav ul li{
-    margin: 10px;
-}
-nav ul li a{
-    display: block;
-    font-size:25px;
-    padding:10px ;
-    margin: 0 auto;
-    text-decoration: none;
-    font-weight: bold;
-    color:black;
-    background-color:white;
-    text-decoration: none;
-    border-radius: 25px;
-    box-shadow: 0 2px 2px #acb4b5;
-    transition: all 0.3s ease;
-    text-align: center;
-}
-nav ul li a:hover{
-    background:transparent;
-    transform: scale(1.1);
-    color: white;
-    background-color: black;
-}
-
-.hero{
-    position: absolute;
-    max-width: 1200px;
-    padding: 20px;
-    border-radius: 20px;
-    top: 25%;
-    justify-content: center;
-    left: 8%;
-    text-align: center;
-}
-
-.hero h1{
-    font-size: 110px;
-    color:white;
-    justify-content: center;
-    font-weight: bolder;
-}
-
-.hero h3{
-    font-size: 40px;
-    color: white;
-    padding: 0;
-    margin: 0;
-}
-
-.button a {
-    display: inline-block;
-    padding: 12px 20px;
-    font-size: 25px;
-    font-weight: bold;
-    color:black;
-    background-color:white;
-    text-decoration: none;
-    border-radius: 25px;
-    box-shadow: 0 4px 4px #acb4b5;
-    transition: all 0.3s ease;
-    text-align: center;
-    left: 20%;
-    position: absolute;
-    bottom: 10%;
-}
-
-.button a:hover {
-    background:transparent;
-    transform: scale(1.2);
-    box-shadow: 0 2px 2px #acb4b5;
-    color:white;
-    background-color:black;
-}
-.button a:nth-child(2){
- left: 50%;
-}
-@media (max-width:1280px) {
-    .hero h1 {
-        font-size: 100px;
-    }
-    .hero h3 {
-        font-size: 40px;
-    }
-    .button a {
-        padding: 10px 16px;
-        font-size: 22px;
-        bottom:14%;
-    }
-    nav ul{
-        padding-top: 10px;
-    }
-    nav{
-        padding-top: 10px;
-    } 
-}
-
-@media (max-width:1024px) {
-    nav ul {
-        margin-right: 20px;
-    }
-    .hero {
-        top: 30%;
-        left: 5%;
-    }
-    .hero h1 {
-        font-size: 90px;
-    }
-    .hero h3 {
-        font-size: 35px;
-        text-align: center;
-    }
-    .button a {
-        left: 10%;
-    }
-    nav{
-        padding-top: 50px;
-        padding-left: 20px;
-        padding-right: 8px;
-    }
-    nav .logo{
-        font-size: 50px;
-    }
-}
-@media (max-width:850px){
-    nav .logo{
-        text-align: center;
-        padding-top: 30px;
-        font-size: 55px;
-    }
-    nav {
-        padding:0px;
-        margin: 0px;
-    }
-    nav ul{
-        margin-top:20px ;
-        text-align: center;
-        display: flex;
-        flex-wrap: wrap;
-    }
-    nav ul li a{
-        font-size: 30px;
-    }
-    .button a{
-        bottom: 20%;
-    }
-}
-
-@media (max-width:768px) {
-    nav {
-        flex-direction: column;
-        padding: 0px;
-        padding-top: 20px;
-    }
-    nav .logo {
-        font-size: 40px;
-        padding:  0;
-    }
-    nav ul {
-        flex-wrap: wrap;
-        margin: 0;
-    }
-    nav ul li a {
-        font-size: 20px;
-    }
-    .hero {
-        left: 5%;
-        top: 28%;
-    }
-    .hero h1 {
-        font-size: 80px;
-    }
-    .hero h3 {
-        font-size: 30px;
-    }
-    .button a {
-        left: 8%;
-    }
-}
-
-@media (max-width:480px) {
-    nav ul {
-        flex-direction: row;
-        align-items: center;
-        padding: 0;
-        margin: 0;
-    }
-    nav .logo{
-        padding-top: 30px;
-        font-size: 45px;
-    }
-    nav ul li a {
-        font-size: 20px;
-        padding: 8px;
-    }
-    .hero {
-        max-width: 100%;
-        top: 30%;
-        left: 2%;
-        text-align: left;
-    }
-    .hero h1 {
-        font-size: 40px;
-        text-align: center;
-        padding: 10px 0;
-    }
-    .hero h3 {
-        font-size: 18px;
-    }
-    .button a {
-        font-size: 16px;
-        padding: 8px 12px;
-        bottom: 12%;
-        left: 10%;
-    }
-}
-
-@media (orientation: landscape) and (max-height: 600px) {
-    .hero {
-        top: 28%;
-        left: 5%;
-    }
-    .hero h1 {
-        font-size: 50px;
-        padding-top: 0;
-    }
-    .hero h3 {
-        font-size: 20px;
-    }
-    .button a {
-        font-size: 14px;
-        bottom: 1%;
-    }
-    nav{
-        margin-top: 0px;
-    }
-    nav .logo{
-        font-size: 40px;
-    }
-    nav ul li a{
-        font-size: 18px;
-        padding: 10px;
-    }
-}
-
-/* Prevent overflow */
-body {
-    overflow-x: hidden;
-}
-@media (max-width: 360px) {
-    nav .logo {
-        font-size: 40px;
-    }
-    nav ul li a {
-        font-size: 20px;
-        padding: 6px;
-    }
-    .hero h1 {
-        font-size: 40px;
-        padding: 20px;
-        text-align: center;
-    }
-    .hero h3 {
-        font-size: 18px;
-        text-align: center;
-    }
-    .button a {
-        font-size: 14px;
-        padding: 6px 8px;
-    }
-}
-@media (max-width:320px){
-    nav .logo {
-        font-size: 30px;
-        padding-top: 0px;
-    }
-    nav ul li a {
-        font-size: 14px;
-        padding: 6px;
-    }
-    nav .logo{
-        padding-top: 10px;}
-    .button a {
-       bottom: 4%;
-       font-size: 14px;
-    }
-}
-
+        body {
+            margin: 0;
+            font-family: 'Times New Roman', Times, serif;
+            background: url(/images/background-2.webp) no-repeat fixed;
+            background-size: cover;
+            font-weight: bold;
+        }
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+            background: white;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .logo {
+            font-size: 2.2em;
+            font-weight: bold;
+            color: #333;
+        }
+        ul {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+        }
+        ul li a {
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+            font-size: 18px;
+            padding: 8px 6px;
+            border-radius: 10px;
+        }
+        ul li a:hover{
+            color: white;
+            background-color: #333;
+        }
+        .hero {
+            text-align: center;
+            padding: 100px 20px;
+            background: linear-gradient(to right, white, #333);
+            color:black;
+            max-width: 1200px;
+            margin: 50px auto;
+            border-radius: 20px;
+        }
+        .hero h1 {
+            font-size: 3em;
+        }
+        .hero h3 {
+            font-size: 1.5rem;
+            margin-top: 10px;
+        }
+        .button {
+            text-align: center;
+            margin-top: 20px;
+        }
+        .button a {
+            display: inline-block;
+            padding: 10px 20px;
+            margin: 10px;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 5px;
+            transition: 0.3s;
+        }
+        .button a:first-child {
+            background: white;
+            color: #333;
+            border: 2px solid #333;
+        }
+        .button a:first-child:hover {
+            background:#333;
+            color: white;
+        }
+        .button a:last-child {
+            background: #333;
+            color: white;
+        }
+        .button a:last-child:hover {
+            background: #423e3e;
+        }
+        @media (max-width: 768px) {
+            nav {
+                flex-direction: column;
+                text-align: center;
+                gap: 10px;
+            }
+            ul {
+                flex-direction: column;
+                gap: 10px;
+                padding-top: 10px;
+            }
+            .hero h1 {
+                font-size: 2rem;
+            }
+            .hero h3 {
+                font-size: 1.2rem;
+            }
+        }
     </style>
 </head>
-    <body>
+<body>
+    <section>
         <nav>
-            <div class="logo">Shemaiah's Profile</div>
+            <div class="logo"><i class="fas fa-home"></i>Shemaiah's Profile</div>
             <ul>
-                <li><a href="/about.html" >About Me</a></li>
-                <li><a href="/portfolio.html"> My Portfolio</a></li>
+                <li><a href="/about.html"><i class="fas fa-info-circle"> </i>About Me</a></li>
+                <li><a href="/portfolio.html"><i class="fas fa-briefcase"></i> My Portfolio</a></li>
             </ul>
         </nav>
         
@@ -350,9 +123,9 @@ body {
             <h3>Building Functional and Beautiful Websites for Modern Needs</h3>
         </div> 
         <div class="button">
-            <a href="/portfolio.html">view my work</a>
-            <a href="/contact.html">Contact Me</a>
+            <a href="/portfolio.html"> <i class="fas fa-book"></i> View My Work</a>
+            <a href="/contact.html"><i class="fas fa-envelope"></i> Contact Me</a>
         </div>
-    </body>
-
+    </section>
+</body>
 </html>

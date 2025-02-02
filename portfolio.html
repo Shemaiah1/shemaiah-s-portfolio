@@ -1,18 +1,10 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio</title>
-    <link rel="stylesheet" href="css/style.css">
-</head>
-<body>
-    <!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio Page</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
     <style>
         body {
             font-family:'Times New Roman', Times, serif ;
@@ -27,13 +19,13 @@
         }
         header h1{
             font-weight: bold;
-            font-size: 60px;
+            font-size: 50px;
             font-weight: bolder;
             margin:0px;
             color:black;
         }
         header p{
-            font-size: 28px;
+            font-size: 24px;
             margin: 5px;
             color:black;
             font-weight: bold;
@@ -147,18 +139,26 @@
 </head>
 <body>
     <header>
-        <h1>My Portfolio</h1>
+        <h1><i class="fas fa-laptop-code"></i> My Portfolio</h1>
         <p>Here are some of my recent projects</p>
         <nav>
             <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="contact.html">Contact</a></li>
+            <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+            <li><a href="about.html"><i class="fas fa-user"></i> About</a></li>
+            <li><a href="contact.html"><i class="fas fa-phone"></i> Contact</a></li>
         </ul>
         </nav>
     </header>
         <div class="container">
-            <!-- Project Card 1 -->
+            <div class="card">
+                <img src="/images/DLA PIC.jpg" alt="Project 1 Thumbnail">
+                <div class="card-body">
+                    <h2 class="card-title">School webpage</h2>
+                    <p class="card-description">Simple but standard webpage for a school.</p>
+                    <a href="https://school-website-iota-lilac.vercel.app/" class="card-button">View Project</a>
+                </div>
+            </div>
+            
             <div class="card">
                 <img src="/images/web design.jpg" alt="Project 1 Thumbnail">
                 <div class="card-body">
@@ -167,7 +167,7 @@
                     <a href="https://css-sidebar-menu-weld.vercel.app/" class="card-button" >View Project</a>
                 </div>
             </div>
-            <!-- Project Card 2 -->
+            
             <div class="card">
                 <img src="/images/recipe.jpg" alt="Project 2 Thumbnail">
                 <div class="card-body">
@@ -177,7 +177,7 @@
                     ">View Project</a>
                 </div>
             </div>
-            <!-- Project Card 3 -->
+    
             <div class="card">
                 <img src="/images/sidebar.jpg" alt="Project 3 Thumbnail">
                 <div class="card-body">
